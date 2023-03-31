@@ -1,0 +1,44 @@
+@model Westcoast.web.ViewModels.CoursePostViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<section class="page">
+    <h1 class="page-title">Lägg till kurs</h1>
+    <form class="shadow" asp-action="create" asp-controller="CoursesAdmin" method="post">
+        <div class="form-control">
+            <label asp-for="CourseTitle"></label>
+            <input asp-for="CourseTitle" />
+            <span class="error" asp-validation-for="CourseTitle"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="CourseName"></label>
+            <input asp-for="CourseName" />
+            <span class="error" asp-validation-for="CourseName"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="StartDate"></label>
+            <input asp-for="StartDate" />
+            <span class="error" asp-validation-for="StartDate"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="EndDate"></label>
+            <input asp-for="EndDate" />
+            <span class="error" asp-validation-for="EndDate"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="CourseLenght"></label>
+            <input asp-for="CourseLenght" />
+            <span class="error" asp-validation-for="CourseLenght"></span>
+        </div>
+        <div class="form-control">
+            <div class="buttons-container">
+                <button type="Submit" class="btn btn-primary"><i class="fa-sharp fa-solid fa-floppy-disk"></i>
+                    Spara</button>
+                <a asp-action="index" asp-controller="CoursesAdmin" class="btn btn-warning"><i
+                        class="fa-solid fa-arrow-left"></i> Avbryt</a>
+            </div>
+        </div>
+    </form>
+</section>

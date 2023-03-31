@@ -1,0 +1,18 @@
+@model Westcoast.web.Models.Course
+
+    <div>
+    <form asp-action="save" asp-controller="courses" method="post">
+
+
+        <div>
+        <input placeholder="CourseName" asp-for="CourseName" />
+        </div>
+
+
+        <input placeholder="Title" asp-for="CourseTitle" />
+        <input placeholder="StartDate" asp-for="StartDate" />
+        <input placeholder="EndDate" asp-for="EndDate" />
+        <input placeholder="CourseLenght" asp-for="CourseLenght" />
+        <button type="submit" value="Save" > </button>
+    </form>
+    </div>

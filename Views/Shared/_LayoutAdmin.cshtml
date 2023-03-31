@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.PageTitle - Westcoast</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/colors-admin.css">
+    <link rel="stylesheet" href="~/css/navigation-admin.css">
+    <link rel="stylesheet" href="~/css/tables.css">
+    <link rel="stylesheet" href="~/css/utilities.css">
+    <script src="https://kit.fontawesome.com/7c9fa55439.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo"><a asp-action="Index" asp-controller="Home">
+                <span class="navbar-logo-primary-text>Westcoast">
+                    <i class="fa-solid fa-book">
+                        
+                    </i> Westcoast</span> Education</a></h1>
+            <ul>
+                <li><a asp-action="Index" asp-controller="Admin">Start</a></li>
+                <li><a asp-action="Index" asp-controller="CoursesAdmin">kurser</a></li>
+                <li><a asp-action="Index" asp-controller="UserAdmin">Användare</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            @RenderBody()
+        </main>
+</body>
+</html>

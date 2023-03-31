@@ -1,0 +1,54 @@
+@model IList<Westcoast.web.Models.User>
+@{
+    Layout = "_LayoutAdmin";
+}
+<section class="page">
+<h1>Aktuella klaser</h1>
+<div class="table-container">
+    
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Student/Lärare</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>AnvändarID</th>
+            <th>Email</th>
+            <th>Telefonnummer</th>
+            <th>Gatuadress</th>
+            <th>Postnummer</th>
+            <th></th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserTitle</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.UserID</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.StreetAdress</td>
+                <td>@user.PostalCode</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</section>

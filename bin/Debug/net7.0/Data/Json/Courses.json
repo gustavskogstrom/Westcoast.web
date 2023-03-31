@@ -1,0 +1,26 @@
+[
+    {
+        "CourseId":142,
+        "CourseName":"Engelska 6",
+        "CourseTitle":"Eng6",
+        "StartDate":"2023",
+        "EndDate":"2023",
+        "CourseLenght":"1 year"
+    },
+    {
+        "CourseId":896,
+        "CourseName":"Engelska 5",
+        "CourseTitle":"Eng5",
+        "StartDate":"2023",
+        "EndDate":"2022",
+        "CourseLenght":"1 year"
+    },
+    {
+        "CourseId":768,
+        "CourseName":"Matematik 3",
+        "CourseTitle":"Matte3",
+        "StartDate":"2022",
+        "EndDate":"2023",
+        "CourseLenght":"1 year"
+    }
+]

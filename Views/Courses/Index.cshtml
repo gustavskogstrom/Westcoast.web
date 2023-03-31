@@ -1,0 +1,49 @@
+@model IList<Westcoast.web.Models.Course>
+@{
+    Layout = "_LayoutAdmin";
+}
+<section class="page">
+<h1>Aktuella klaser</h1>
+<div class="table-container">
+    
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Titel</th>
+            <th>Kursnamn</th>
+            <th>Startdatum</th>
+            <th>Slutdatum</th>
+            <th>Kurslängd</th>
+            <th>Kurs pm</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseTitle</td>
+                <td>@course.CourseName</td>
+                <td>@course.StartDate</td>
+                <td>@course.EndDate</td>
+                <td>@course.CourseLenght</td>
+                <td>@course.CourseID</td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+</div>
+</section>

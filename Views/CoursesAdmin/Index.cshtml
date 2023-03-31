@@ -1,0 +1,57 @@
+@model IList<Westcoast.web.ViewModels.CourseListViewModel>
+@{
+    Layout = "_LayoutAdmin";
+}
+<section class="page">
+<h1>Aktuella klasser</h1>
+<div class="table-container">
+    <div>
+        <a class="btn btn-primary" asp-action="create" asp-controller="CoursesAdmin">Lägg till klass</a>
+    </div>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Titel</th>
+            <th>Kursnamn</th>
+            <th>Startdatum</th>
+            <th>Slutdatum</th>
+            <th>Kurslängd</th>
+            <th>Kurs pm</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>
+                    <a class="edit-icon" asp-action="Edit" asp-controller="CoursesAdmin" asp-route-courseID=@course.CourseID>
+                        <i class="fa-sharp fa-solid fa-pen"></i></a>
+                </td>
+                <td>@course.CourseTitle</td>
+                <td>@course.CourseName</td>
+                <td>@course.StartDate</td>
+                <td>@course.EndDate</td>
+                <td>@course.CourseLenght</td>
+                <td>@course.CourseID</td>
+                <td><a class="delete-icon" asp-action="Delete" asp-controller="CoursesAdmin" asp-route-courseID=@course.CourseID><i class="fa-solid fa-trash-can"></i></a></td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            
+        </tr>
+    </tfoot>
+</table>
+</div>
+</section>

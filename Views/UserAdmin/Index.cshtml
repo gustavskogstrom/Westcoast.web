@@ -1,0 +1,65 @@
+@model IList<Westcoast.web.ViewModels.UserListViewModel>
+@{
+    Layout = "_LayoutAdmin";
+}
+<section class="page">
+<h1>Användare</h1>
+<div class="table-container">
+    <div>
+        <a class="btn btn-primary" asp-action="create" asp-controller="UserAdmin">Lägg till användare</a>
+    </div>
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th>Student/Lärare</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>AnvändarID</th>
+            <th>Email</th>
+            <th>Telefonnummer</th>
+            <th>Gatuadress</th>
+            <th>Postnummer</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    <a class="edit-icon" asp-action="Edit" asp-controller="UserAdmin" asp-route-userID=@user.UserID>
+                        <i class="fa-sharp fa-solid fa-pen"></i></a>
+                </td>
+                <td>@user.UserTitle</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.UserID</td>
+                <td>@user.Email</td>
+                <td>@user.PhoneNumber</td>
+                <td>@user.StreetAdress</td>
+                <td>@user.PostalCode</td>
+                
+                <td><a class="delete-icon" asp-action="Delete" asp-controller="UserAdmin" asp-route-userID=@user.UserID>
+                    <i class="fa-solid fa-trash-can"></i></a></td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            
+        </tr>
+    </tfoot>
+</table>
+</div>
+</section>

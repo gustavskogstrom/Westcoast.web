@@ -1,0 +1,32 @@
+[
+    {
+        "FirstName" : "Gustav",
+        "LastName" : "Skogström",
+        "UserTitle" : "musten",
+        "UserID" : "412",
+        "Email" : "gustav.skogstrom@gmail.com",
+        "PhoneNumber" : "0735086830",
+        "StreetAdress" : "Apelsin",
+        "PostalCode" : "3342"
+    },
+    {
+        "FirstName" : "Therese",
+        "LastName" : "Skogström",
+        "UserTitle" : "Tessan",
+        "UserID" : "342",
+        "Email" : "Therese@gmail.com",
+        "PhoneNumber" : "0735086830",
+        "StreetAdress" : "Sand",
+        "PostalCode" : "3325"
+    },
+    {
+        "FirstName" : "Anders",
+        "LastName" : "Freds",
+        "UserTitle" : "And",
+        "UserID" : "657",
+        "Email" : "Anders@gmail.com",
+        "PhoneNumber" : "0735086830",
+        "StreetAdress" : "Citron",
+        "PostalCode" : "4253"
+    }
+]

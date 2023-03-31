@@ -1,0 +1,28 @@
+@model Westcoast.web.Models.User
+
+    <div>
+    <form asp-action="save" asp-controller="user" method="post">
+
+
+        <div>
+        <input placeholder="Student/Lärare" asp-for="UserTitle" />
+        </div>
+
+
+        <input placeholder="Förnamn" asp-for="FirstName" />
+
+        <input placeholder="Efternamn" asp-for="LastName" />
+
+        <input placeholder="AnvändarID" asp-for="UserID" />
+
+        <input placeholder="Email" asp-for="Email" />
+
+        <input placeholder="Telefonnummer" asp-for="PhoneNumber" />
+
+        <input placeholder="Gatuadress" asp-for="StreetAdress" />
+
+        <input placeholder="Postnummer" asp-for="PostalCode" />
+
+        <button type="submit" value="Save" > </button>
+    </form>
+    </div>

@@ -1,0 +1,59 @@
+@model Westcoast.web.ViewModels.UserPostViewModel
+
+@{
+    Layout = "_LayoutAdmin";
+}
+
+<section class="page">
+    <h1 class="page-title">Lägg till användare</h1>
+    <form class="shadow" asp-action="create" asp-controller="UserAdmin" method="post">
+        <div class="form-control">
+            <label for="UserTitle">Student/Lärare</label>
+            <input asp-for="UserTitle" />
+            <span class="error" asp-validation-for="UserTitle"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" />
+            <span class="error" asp-validation-for="FirstName"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" />
+            <span class="error" asp-validation-for="LastName"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="UserID"></label>
+            <input asp-for="UserID" />
+            <span class="error" asp-validation-for="UserID"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span class="error" asp-validation-for="Email"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" />
+            <span class="error" asp-validation-for="PhoneNumber"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="StreetAdress"></label>
+            <input asp-for="StreetAdress" />
+            <span class="error" asp-validation-for="StreetAdress"></span>
+        </div>
+        <div class="form-control">
+            <label asp-for="PostalCode"></label>
+            <input asp-for="PostalCode" />
+            <span class="error" asp-validation-for="PostalCode"></span>
+        </div>
+        <div class="form-control">
+            <div class="buttons-container">
+                <button type="Submit" class="btn btn-primary"><i class="fa-sharp fa-solid fa-floppy-disk"></i>
+                    Spara</button>
+                <a asp-action="Index" asp-controller="UserAdmin" class="btn btn-warning"><i
+                        class="fa-solid fa-arrow-left"></i> Avbryt</a>
+            </div>
+        </div>
+    </form>
+</section>
